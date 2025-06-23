@@ -21,7 +21,7 @@ consumers:
 plugins:
 - config:
     key_names:
-    - apikey
+    - key
   name: key-auth
   service: customer-information-service
 - config:
@@ -44,7 +44,7 @@ plugins:
     add:
       body: []
       headers:
-      - X-Powered-By:Konnect!!
+      - X-Powered-By:Konnect
   enabled: true
   name: request-transformer-advanced
 services:
@@ -61,7 +61,7 @@ services:
     - GET
     name: customer-information-service_get-cust-info
     paths:
-    - ~/customers$
+    - ~/clients$
     plugins: []
     regex_priority: 200
     strip_path: false
