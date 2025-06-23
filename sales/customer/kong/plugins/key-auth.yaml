@@ -3,4 +3,4 @@ plugins:
   service: customer-information-service
   config:
     key_names:
-    - apikey
+    - key
