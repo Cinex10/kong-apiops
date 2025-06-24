@@ -41,6 +41,12 @@ plugins:
   name: proxy-cache-advanced
   route: customer-information-service_get-cust-info
 - config:
+    hour: 1000
+    policy: local
+    second: 5
+  name: rate-limiting
+  service: customer-information-service
+- config:
     add:
       body: []
       headers:
@@ -61,7 +67,7 @@ services:
     - GET
     name: customer-information-service_get-cust-info
     paths:
-    - ~/clients$
+    - ~/consumers$
     plugins: []
     regex_priority: 200
     strip_path: false
