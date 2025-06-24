@@ -1,0 +1,7 @@
+plugins:
+  - name: rate-limiting
+    service: customer-information-service
+    config:
+      second: 5
+      hour: 1000
+      policy: local
